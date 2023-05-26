@@ -1,6 +1,10 @@
-# 20231-team-13
+# <p align="center">Software para Restaurante</p>
 
-Software desenvolvido para facilitar a organização do restaurante que fornece o cardápio completo do estabelecimento, realiza o pedido dos clientes de acordo com cada comanda cadastrada, envia o pedido para a cozinha e fecha a conta de acordo com a forma de pagamento escolhida por cada indivíduo.
+
+<h4 align="center"> 
+    :construction:  Projeto em construção  :construction:
+</h4>
+Software desenvolvido para facilitar a organização de um restaurante que fornece o cardápio completo do estabelecimento, realiza o pedido dos clientes de acordo com cada comanda cadastrada, envia o pedido para a cozinha e fecha a conta de acordo com a forma de pagamento escolhida por cada indivíduo.
 https://www.notion.so/App-Restaurante-e6aa983c62984edf81e3af811b8961ea?pvs=4
 Nomes: 
 Marcelo Félix Hochreiter
@@ -8,12 +12,15 @@ Bárbara Ferreira Ramos
 Samira Araujo Malaquias Souza
 Samuel Lucca Viana Miranda
 
+<h2>User stories</h2>
+
+
 User Story 1:
 Como um cliente, desejo visualizar todo o cardápio, separado por categorias especificas juntamente com o preço, para que eu possa avaliar e acompanhar minha preferência de pedido.
 
-3 comidas.
+3 comidas de opção.
 
-3 bebidas.
+3 bebidas de opção.
 
 Critérios de aceitação:
 
@@ -59,13 +66,13 @@ Como Cliente gostaria de um sistema de delivery onde posso escolher os pratos qu
 
 Critérios de aceitação:
 
-. Possivel acessar o cardapio para escolher o pedido.
+- Possivel acessar o cardapio para escolher o pedido.
 
-. Possivel setar uma taxa de entrega.
+- Possivel setar uma taxa de entrega.
 
-. Deve ser possivel criar frota de entregadores.
+- Deve ser possivel criar frota de entregadores.
 
-. Deve ser possivel verificar a disponibilidade de entrega.
+- Deve ser possivel verificar a disponibilidade de entrega.
 
 User Story 6:
 
@@ -73,8 +80,18 @@ Como gerente do restaurante quero poder contabilizar o rendimento do restaurante
 
 Criterios de aceitacao:
 
-. Deve contabilizar todas as cobrancas feitas.
+- Deve contabilizar todas as cobrancas feitas.
 
-. Deve retornar as trasacoes de um determinado periodo.
+- Deve retornar as trasacoes de um determinado periodo.
 
-. Deve efetuar operacoes de deposito e retirada do caixa.
+- Deve efetuar operacoes de deposito e retirada do caixa.
+
+User Story 7: Como cliente eu quero saber o valor total dos produtos que eu consumi e escolher a minha forma de pagamento para que eu possa pagar o restaurante.
+
+Critérios de Aceitação:
+
+- Deve somar o valor de todos os produtos consumidos
+- Deve disponibilizar as alternativas de pagamento
+- Deve informar ao Caixa quando a conta for paga
+- Deve calcular os 10% do garçom
+- Deve dar a opção de dar gorjeta para o garçom
