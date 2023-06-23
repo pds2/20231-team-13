@@ -1,0 +1,24 @@
+Comandos SQLite para o trabalho de PDS
+
+// Criar tabela de estoque caso não exista:
+
+CREATE TABLE ESTOQUE(
+      ID 			  INT     NOT NULL,
+      NOME           TEXT    NOT NULL,
+      QUANTIDADE     REAL    NOT NULL,
+      UNIDADE        TEXT    NOT NULL
+);
+
+// Inserir um produto no estoque
+
+INSERT INTO ESTOQUE (ID,NOME,QUANTIDADE,UNIDADE) VALUES (
+  '%d',
+  '%s',
+  '%f',
+  '%s'
+);
+
+// Remover um produto do estoque
+
+DELETE FROM ESTOQUE
+WHERE ID = %d AND NOME = '%s';
