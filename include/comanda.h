@@ -10,6 +10,14 @@
 
 using namespace std;
 
+//verifica se nao é criada uma comanda para um cliente que nao existe
+class cliente_nao_existe_e {};
+//verifica se o prato existe no cardapio antes de adicionalo à comanda
+class prato_nao_existe_e {};
+//verifica se o prato existe na comanda antes de retira-lo
+class prato_nao_encontrado_e {};
+
+
 class Comanda{
     friend class Conta;
     private:
