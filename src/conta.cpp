@@ -1,6 +1,9 @@
 #include "../include/conta.h"
 
 Conta::Conta(Comanda* comanda){
+    if(comanda==nullptr){
+        throw comanda_nao_existe_e();
+    }
     _comanda=comanda;
     valorTotal=0;
     contaPaga=false;
