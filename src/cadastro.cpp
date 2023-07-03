@@ -1,5 +1,5 @@
 #include <iostream>
-#include  "include/cadastro.h"
+#include  "../include/cadastro.h"
 
 
 
