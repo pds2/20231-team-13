@@ -3,7 +3,10 @@
 
 #include <iostream>
 #include "comanda.h"
+
 using namespace std;
+
+class comanda_nao_existe_e{};
 
 class Conta{
     friend class Caixa;
