@@ -21,7 +21,7 @@ void Conta::exibirFormasDePagamento(){
     cout<< "Formas de pagamento disponiveis: Dinheiro, Crédito, Débito e pix"<< endl;
 }
 
-void Conta::informarContaPaga(){
+bool Conta::informarContaPaga(){
     contaPaga =true;
     cout<< "Pagamento efetuado com sucesso!"<< endl;
 }

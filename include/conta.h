@@ -6,6 +6,7 @@
 using namespace std;
 
 class Conta{
+    friend class Caixa;
     private:
     Comanda* _comanda;
     double valorTotal;
@@ -17,7 +18,7 @@ class Conta{
     void calcularValorTotal();
     void exibirValorTotal();
     void exibirFormasDePagamento();
-    void informarContaPaga();
+    bool informarContaPaga();
     void exibirValorTotalComGorjeta();
 };
 
