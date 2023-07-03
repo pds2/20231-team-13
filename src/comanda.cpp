@@ -1,10 +1,17 @@
 #include "../include/comanda.h"
 
+
 Comanda::Comanda(Cadastro* cliente){
+    if (cliente== nullptr){
+        throw cliente_nao_existe_e();
+    }
     _cliente=cliente;
 }
 
 void Comanda::adicionarPedido(Prato* prato){
+    if (prato == nullptr){
+        throw prato_nao_existe_e();
+    }
     pedidos.push_back(prato);
 }
 
@@ -24,7 +31,7 @@ void Comanda::cancelarPedido(Prato* prato) {
         pedidos.erase(it);
         cout << "Pedido removido!" << endl;
     } else {
-        cout << "Pedido não encontrado!" << endl;
+        throw prato_nao_encontrado_e();
     }
 }
 
