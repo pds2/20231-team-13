@@ -6,6 +6,8 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include <algorithm>
+
 using namespace std;
 
 class Comanda{
@@ -19,7 +21,8 @@ class Comanda{
     Comanda(Cadastro* cliente);
     void adicionarPedido(Prato* prato);
     void exibirPedidos();
-//oi
+    void cancelarPedido(Prato* prato);
+
 };
 
 

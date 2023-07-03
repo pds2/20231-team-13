@@ -14,6 +14,7 @@ telefone e
  cpf.
  */
 class Cadastro {
+  friend class Comanda;
   private:
     unsigned int _id;
     std::string _nome;
