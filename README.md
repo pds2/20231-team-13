@@ -82,7 +82,7 @@ Criterios de aceitacao:
 
 - Deve contabilizar todas as cobrancas feitas.
 
-- Deve retornar as trasacoes de um determinado periodo.
+- Deve retornar as trasacoes totais.
 
 - Deve efetuar operacoes de deposito e retirada do caixa.
 
