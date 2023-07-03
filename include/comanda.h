@@ -18,7 +18,7 @@ class Comanda{
     Comanda(Cadastro* cliente);
     void adicionarPedido(Prato* prato);
     void exibirPedidos();
-
+//oi
 };
 
 
