@@ -6,6 +6,9 @@
 #include<iostream>
 
 
+class nome_invalido_e {};
+class preço_invalido_e {};
+
 class Prato {
 protected:
     std::string _nome;

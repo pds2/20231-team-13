@@ -1,14 +1,25 @@
-#include "include/cardapio.h"
+#include "../include/cardapio.h"
+#include <string>
 
-Prato::Prato(const std::string& nome, double preco) : 
-_nome(nome), _preco(preco) {}
+Prato:: Prato(const std::string& nome, double preco) {
+        if (nome.empty()) {
+            throw nome_invalido_e()
+        }
+        _nome = nome;
+
+        if (preco <= 0) {
+            throw preço_invalido_e();
+        _preco = preco;
+    }
 
 std::string Prato::get_nome() const {
-  return this->_nome;
+    return _nome;
 }
+
 double Prato::get_preco() const {
   return this->_preco;
 }
+
  void Prato::exibir() const {
         std::cout << "Nome: " << this->_nome << ", Preco: R$" << this->_preco << std::endl;
     }
