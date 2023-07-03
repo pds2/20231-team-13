@@ -35,6 +35,13 @@ void Comanda::cancelarPedido(Prato* prato) {
     }
 }
 
+Cadastro* Comanda::getCliente() const {
+    return _cliente;
+}
+
+vector<Prato*>& Comanda::getPedidos() {
+        return pedidos;
+    }
 
 
 
