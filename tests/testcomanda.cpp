@@ -3,7 +3,7 @@
 #include "../include/cadastro.h"
 #include "../include/cardapio.h"
 
-TEST_CASE("teste do construtor da comanda"){
+TEST_CASE("teste da comanda"){
     Cadastro cliente(123,"Samira","123456789","1234567890");
     Comanda comanda(&cliente);
     CHECK(comanda.getCliente()==&cliente);

@@ -19,10 +19,11 @@ class Conta{
     public:
     Conta(Comanda* comanda);
     void calcularValorTotal();
-    void exibirValorTotal();
+    double get_valorTotal();
     void exibirFormasDePagamento();
     bool informarContaPaga();
-    void exibirValorTotalComGorjeta();
+    double exibirValorTotalComGorjeta();
+    bool get_contaPaga();
 };
 
 

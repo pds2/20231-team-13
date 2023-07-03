@@ -16,8 +16,8 @@ void Conta::calcularValorTotal(){
     }
 }
 
-void Conta::exibirValorTotal(){
-    cout<< "Valor total: R$" << valorTotal << endl;
+double Conta::get_valorTotal(){
+    return valorTotal;
 }
 
 void Conta::exibirFormasDePagamento(){
@@ -29,6 +29,10 @@ bool Conta::informarContaPaga(){
     cout<< "Pagamento efetuado com sucesso!"<< endl;
 }
 
-void Conta::exibirValorTotalComGorjeta(){
-    cout<< "Valor total com gorjeta: R$" << (valorTotal*1,1)<<endl;
+double Conta::exibirValorTotalComGorjeta(){
+    return (valorTotal*1,1);
+}
+
+bool Conta::get_contaPaga(){
+    return contaPaga;
 }
