@@ -4,8 +4,8 @@
 #include <string>
 #include <vector>
 #include<iostream>
-
-
+#include <stdexcept>
+#include <regex>
 /*
  * A classe cadastro 
  guarda o número da comanda,
@@ -13,6 +13,11 @@
 telefone e
  cpf.
  */
+
+class id_invalido_e {};
+class nome_invalido_e {};
+class telefone_invalido_e {};
+class cpf_invalido_e {};
 class Cadastro {
   friend class Comanda;
   private:
@@ -21,12 +26,14 @@ class Cadastro {
     std::string _telefone;
     std::string _cpf;
     std::vector<Cadastro> _novocliente; // Vetor para armazenar os clientes
-
+ bool validarCPF(const std::string& cpf);
   public:
     /*
      * @brief constrói o cadastro 
      */
     Cadastro(int id,std::string nome,std::string telefone, std::string cpf);
+
+  bool validarCPF(const std::string& cpf);
 
     /*
      * @brief pega o identificador da comanda
