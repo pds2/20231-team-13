@@ -1,14 +1,46 @@
-#include"../include/cadastro.h"
-#include"../include/cardapio.h"
+#include "../include/menu.h"
 #include <iostream>
+#include <string>
+
+
+
 int main() {
-    Cardapio cardapio;
+    Menu _menu;
+    const std::string senhaGerente = "12345";
+    unsigned int menuOptions1 = 0;
+    unsigned int menuOptions2 = 0;
+    for (;;)
+    {
+        _menu.MenuStart();
+        std::cin >> menuOptions1;
+        if(menuOptions1 == 1)
+        {
+            _menu.MenuCliente();
+        }
+        if (menuOptions1 == 2)
+        {
+            std::string senha;
+            std::cout << "Digite a senha: ";
+            std::cin >> senha;
+            std::cout << std::endl;
+            if (senha != senhaGerente)
+            {
+                std::cout << "Senha Incorreta"<< std::endl;
+                continue;
+            }
+            if (senha == senhaGerente)
+            {
+                _menu.MenuGerente();
+            }
+            
+            
 
-    cardapio.adicionarPrato(new Entrada("Salada", 10.0));
-    cardapio.adicionarPrato(new PratoPrincipal("Bife com batatas", 25.0));
-    cardapio.adicionarPrato(new Sobremesa("Pudim", 8.0));
-
-    cardapio.exibir();
-
-    return 0;
+        }
+        if(menuOptions1 == 0)
+        {
+            exit(0);
+        }
+        
+    }
+    
 }
