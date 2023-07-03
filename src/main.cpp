@@ -1,6 +1,5 @@
-#include"include/cadastro.h"
-#include"include/caixa.h"
-#include"include/cardapio.h"
+#include"../include/cadastro.h"
+#include"../include/cardapio.h"
 #include <iostream>
 int main() {
     Cardapio cardapio;
