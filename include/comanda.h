@@ -9,6 +9,7 @@
 using namespace std;
 
 class Comanda{
+    friend class Conta;
     private:
     Cadastro* _cliente;
     vector<Prato*> pedidos;
