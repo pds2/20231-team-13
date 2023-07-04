@@ -13,13 +13,8 @@ Prato:: Prato(const std::string nome, double preco) {
     }
 }
 
-std::string Prato::get_nome() const {
-    return _nome;
-}
-
-
 double Prato::get_preco() const {
-  return this->_preco;
+  return _preco;
 }
 
  void Prato::exibir() const {
@@ -56,6 +51,7 @@ void Sobremesa::exibir() const {
         for (const Prato prato : pratos) {
             prato.exibir();
         }
+<<<<<<< HEAD
     }
 
     Prato* Cardapio::get_prato_escolhido(std::string nomeDoPrato)
@@ -70,4 +66,7 @@ void Sobremesa::exibir() const {
             
         }
         
+=======
+    
+>>>>>>> e535c8ce56b0c5cc56dd5d7e850918bd637c34e8
     }
