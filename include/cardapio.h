@@ -6,7 +6,7 @@
 #include<iostream>
 
 
-class nome_invalido_e {};
+class cliente_invalido_e {};
 class preço_invalido_e {};
 
 class Prato {

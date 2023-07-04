@@ -3,7 +3,7 @@
 
 Prato:: Prato(const std::string& nome, double preco) {
         if (nome.empty()) {
-            throw nome_invalido_e()
+            throw cliente_invalido_e();
         }
         _nome = nome;
 
@@ -11,13 +11,13 @@ Prato:: Prato(const std::string& nome, double preco) {
             throw preço_invalido_e();
         _preco = preco;
     }
-
+}
 std::string Prato::get_nome() const {
     return _nome;
 }
 
 double Prato::get_preco() const {
-  return this->_preco;
+  return _preco;
 }
 
  void Prato::exibir() const {
@@ -60,4 +60,5 @@ void Sobremesa::exibir() const {
         for (const Prato* prato : pratos) {
             prato->exibir();
         }
+    
     }
