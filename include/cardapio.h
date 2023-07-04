@@ -49,6 +49,8 @@ public:
     void adicionarPrato(Prato prato);
 
     void exibir() const;
+
+    Prato* get_prato_escolhido(std::string nomeDoPrato);
 };
 
 #endif

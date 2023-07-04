@@ -16,6 +16,8 @@ class Estoque{
     void adicionar_estoque(string item, int quantidade);
 
     void remover_estoque(string item, int quantidade);
+
+    int get_quantidade(string nomeDoProduto);
 };
 
 

@@ -57,3 +57,17 @@ void Sobremesa::exibir() const {
             prato.exibir();
         }
     }
+
+    Prato* Cardapio::get_prato_escolhido(std::string nomeDoPrato)
+    {
+        for (auto x:pratos)
+        {
+            if (x.get_nome() == nomeDoPrato)
+            {
+                Prato* aux = &x;
+                return aux;
+            }
+            
+        }
+        
+    }

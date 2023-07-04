@@ -11,3 +11,8 @@ void Estoque::remover_estoque(string item, int quantidade) {
             cout << "Quantidade insuficiente de " << item << " no estoque." << endl;
         }
     }
+
+int Estoque::get_quantidade(std::string nomeDoProduto)
+{
+    return estoque[nomeDoProduto];
+}

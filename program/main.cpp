@@ -18,14 +18,15 @@ int main() {
     const std::string senhaGerente = "12345";
     unsigned int menuOptions1 = 0;
     unsigned int menuOptions2 = 0;
-    for (;;)
-    {
     Menu _menu;
     Cadastro _cadastro;
     Estoque _estoque;
     Caixa _caixa;
     Cardapio _cardapio;
     Comanda _comanda;
+    for (;;)
+    {
+  
         _menu.MenuStart();
         std::cin >> menuOptions1;
         if(menuOptions1 == 1)
@@ -68,17 +69,23 @@ int main() {
 
             if (menuOptions2 == 3)
             {
-                
+                std::string nomeDoPrato;
+                std::cout << "Digite o nome do prato: " << std::endl;
+                cin >> nomeDoPrato;
+                _comanda.adicionarPedido(_cardapio.get_prato_escolhido(nomeDoPrato));
             }
 
             if (menuOptions2 == 4)
             {
-                
+                _comanda.exibirPedidos();
             }
 
             if(menuOptions2 == 5)
             {
-
+                std::string nomeDoPrato;
+                std::cout << "Digite o nome do prato: " << std::endl;
+                cin >> nomeDoPrato;
+                _comanda.cancelarPedido(_cardapio.get_prato_escolhido(nomeDoPrato));
             }
 
             if (menuOptions2 == 6)
