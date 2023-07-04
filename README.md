@@ -1,18 +1,16 @@
-# <p align="center">Software para Restaurante</p>
-
-
+<p align="center">Software para Restaurante</p>
 <h4 align="center"> 
     :construction:  Projeto em construção  :construction:
 </h4>
 Software desenvolvido para facilitar a organização de um restaurante que fornece o cardápio completo do estabelecimento, realiza o pedido dos clientes de acordo com cada comanda cadastrada, envia o pedido para a cozinha e fecha a conta de acordo com a forma de pagamento escolhida por cada indivíduo.
-https://www.notion.so/App-Restaurante-e6aa983c62984edf81e3af811b8961ea?pvs=4
-Nomes: 
+Link do projeto: Notion - App Restaurante
+
+Nomes dos desenvolvedores:
+
 Marcelo Félix Hochreiter
 Bárbara Ferreira Ramos
 Samira Araujo Malaquias Souza
 Samuel Lucca Viana Miranda
-
-<h2>User stories</h2>
 
 
 User Story 1:
@@ -60,21 +58,8 @@ Critérios de aceitação:
 - Deve ser atualizado após cada pedido feito.
 - Deve conter forma de entrega do pedido
 
-- User Story 5:
 
-Como Cliente gostaria de um sistema de delivery onde posso escolher os pratos que desejo, ver a taxa de entrega e disponibilidade.
-
-Critérios de aceitação:
-
-- Possivel acessar o cardapio para escolher o pedido.
-
-- Possivel setar uma taxa de entrega.
-
-- Deve ser possivel criar frota de entregadores.
-
-- Deve ser possivel verificar a disponibilidade de entrega.
-
-User Story 6:
+User Story 5:
 
 Como gerente do restaurante quero poder contabilizar o rendimento do restaurante e poder efetuar as trasacoes com os clientes.
 
@@ -86,7 +71,7 @@ Criterios de aceitacao:
 
 - Deve efetuar operacoes de deposito e retirada do caixa.
 
-User Story 7: Como cliente eu quero saber o valor total dos produtos que eu consumi e escolher a minha forma de pagamento para que eu possa pagar o restaurante.
+User Story 6: Como cliente eu quero saber o valor total dos produtos que eu consumi e escolher a minha forma de pagamento para que eu possa pagar o restaurante.
 
 Critérios de Aceitação:
 
