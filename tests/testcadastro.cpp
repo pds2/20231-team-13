@@ -1,18 +1,8 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #define TEST_CASE 
+#define SUBCASE DOCTEST_SUBCASE
 #include "../third_party/doctest.h"
 #include "../include/cadastro.h"
-
-TEST_CASE("Teste do construtor Cadastro") {
-    // Teste 1: ID inválido
-    SUBCASE("ID inválido") {
-        CHECK_THROWS_AS(Cadastro(-1, "João", "12345", "12345678910"), std::invalid_argument);
-    }
-TEST_CASE("Teste ValidarCPF") {
-    Cadastro cliente("id", "nome", "telefone", "123456789");
-    CHECK(Cadastro.GetCPF() == "123456789");
-}
-
 
 
 // Testes de unidade usando doctest

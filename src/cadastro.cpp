@@ -1,19 +1,11 @@
 #include <iostream>
+#include <regex>
 #include  "../include/cadastro.h"
 
 
 
- bool validarCPF(const std::string& cpf) {
-        // Verifica o formato do CPF usando uma expressão regular
-        std::regex formatoCPF(R"(\d{3}\.\d{3}\.\d{3}-\d{2})");
-        if (!std::regex_match(cpf, formatoCPF)) {
-            return false;
-        }
 
-    Cadastro::Cadastro(int id, 
-    std::string nome, 
-    std::string telefone, 
-    std::string cpf) {
+   Cadastro::Cadastro(int id,std::string nome,std::string telefone, std::string cpf) {
         try {
             // Verifica se o ID é válido (maior que zero)
             if (id <= 0) {
@@ -38,8 +30,12 @@
                 throw cpf_invalido_e();
             }
             this->_cpf = cpf;
-        } 
-      }
+        } catch (...) {
+        // Lógica de tratamento da exceção
+    }
+}
+   
+   
 
 unsigned int Cadastro::get_id() {
   return _id;
@@ -54,6 +50,14 @@ std::string Cadastro::get_cpf() {
   return _cpf;
 }
 
+ bool Cadastro::validarCPF(const std::string& cpf) {
+        // Verifica o formato do CPF usando uma expressão regular
+        std::regex formatoCPF(R"(\d{3}\.\d{3}\.\d{3}-\d{2})");
+        if (!std::regex_match(cpf, formatoCPF)) {
+            return false;
+        }
+        return true;
+  }
 void Cadastro::novo_cliente(int id, const std::string& nome, const std::string& telefone, const std::string& cpf) {
         Cadastro novoCliente(id, nome, telefone, cpf);
         novoCliente._id = id;

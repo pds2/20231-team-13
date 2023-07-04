@@ -26,14 +26,13 @@ class Cadastro {
     std::string _telefone;
     std::string _cpf;
     std::vector<Cadastro> _novocliente; // Vetor para armazenar os clientes
- bool validarCPF(const std::string& cpf);
   public:
     /*
      * @brief constrói o cadastro 
      */
     Cadastro(int id,std::string nome,std::string telefone, std::string cpf);
 
-  bool validarCPF(const std::string& cpf);
+    bool validarCPF(const std::string& cpf);
 
     /*
      * @brief pega o identificador da comanda
