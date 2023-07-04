@@ -28,16 +28,14 @@ void Menu::MenuCliente()
 {
     std::cout << "MENU CLIENTE" << std:: endl;
     std::cout << "(1)- Criar novo cadastro." << std::endl;
-    std::cout << "(2)- Gerar nova comanda." << std::endl;
-    std::cout << "(3)- Exibir cardapio." << std::endl;
-    std::cout << "(4)- Adicionar pedidos." << std::endl;
-    std::cout << "(5)- Exibir Pedidos." << std::endl;
-    std::cout << "(6)- Cancelar pedido." << std::endl;
-    std::cout << "(7)- Exibir formas de pagamento." << std::endl;
-    std::cout << "(8)- Exibir valor total." << std::endl;
-    std::cout << "(9)- Exibir valor total com gorjeta." << std::endl;
-    std::cout << "(10)- Efetuar pagamento" << std::endl;
-    std::cout << "(11)- Informar pagamento efetuado " << std::endl;
+    std::cout << "(2)- Exibir cardapio." << std::endl;
+    std::cout << "(3)- Adicionar pedidos." << std::endl;
+    std::cout << "(4)- Exibir Pedidos." << std::endl;
+    std::cout << "(5)- Cancelar pedido." << std::endl;
+    std::cout << "(6)- Exibir formas de pagamento." << std::endl;
+    std::cout << "(7)- Exibir valor total." << std::endl;
+    std::cout << "(8)- Exibir valor total com gorjeta." << std::endl;
+    std::cout << "(9)- Efetuar pagamento" << std::endl;
     std::cout << "(0)- Sair" << std::endl;
     std::cout << "Digite sua opção: ";
 

@@ -8,6 +8,8 @@
 
 class cliente_invalido_e {};
 class preço_invalido_e {};
+class nome_prato_invalido_e {};
+class preco_invalido_e {};
 
 class Prato {
 protected:
@@ -15,40 +17,38 @@ protected:
     double _preco;
 
 public:
-    Prato(const std::string& nome, double preco);
+    Prato(const std::string nome, double preco);
     std::string get_nome() const;
     double get_preco() const;
-    virtual ~Prato();
      void exibir() const;
 };
 
 class Entrada : public Prato {
 public:
-    Entrada(const std::string& nome, double preco);
+    Entrada(const std::string nome, double preco);
 
     void exibir() const;
 };
 class PratoPrincipal : public Prato {
 public:
-    PratoPrincipal(const std::string& nome, double preco);
+    PratoPrincipal(const std::string nome, double preco);
 
     void exibir() const;
 };
 class Sobremesa : public Prato {
 public:
-    Sobremesa(const std::string& nome, double preco);
+    Sobremesa(const std::string nome, double preco);
 
     void exibir() const;
 };
 
 class Cardapio {
 private:
-    std::vector<Prato*> pratos;
+    std::vector<Prato> pratos;
 
 public:
-    ~Cardapio();
 
-    void adicionarPrato(Prato* prato);
+    void adicionarPrato(Prato prato);
 
     void exibir() const;
 };

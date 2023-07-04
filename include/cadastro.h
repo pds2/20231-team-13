@@ -30,6 +30,7 @@ class Cadastro {
     /*
      * @brief constrói o cadastro 
      */
+    Cadastro();
     Cadastro(int id,std::string nome,std::string telefone, std::string cpf);
 
     bool validarCPF(const std::string& cpf);
@@ -40,9 +41,9 @@ class Cadastro {
     unsigned int get_id();
 
     /*
-     * @brief pega o nome do cliente
-     */
-    std::string get_nome();
+                if (menuOptions2 == 7)
+                {
+                    
 
     /*
      * @brief pega o telefone do cliente
@@ -57,6 +58,10 @@ class Cadastro {
      * @brief adiciona um novo cliente
      */
     void novo_cliente(int id, const std::string& nome, const std::string& telefone, const std::string& cpf);
+
+    Cadastro* get_novo_cliente();
+
+    std::string get_nome();
 
 };
 #endif

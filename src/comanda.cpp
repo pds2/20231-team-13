@@ -1,5 +1,9 @@
 #include "../include/comanda.h"
 
+Comanda::Comanda()
+{
+
+}
 
 Comanda::Comanda(Cadastro* cliente){
     if (cliente== nullptr){
@@ -42,6 +46,14 @@ Cadastro* Comanda::getCliente() const {
 vector<Prato*>& Comanda::getPedidos() {
         return pedidos;
     }
+
+void Comanda::adicionarComanda(Cadastro* cliente)
+{
+    if (cliente== nullptr){
+        throw cliente_nao_existe_e();
+    }
+    _cliente=cliente;
+}
 
 
 

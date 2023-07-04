@@ -26,12 +26,14 @@ class Comanda{
 
 
     public:
+    Comanda();
     Comanda(Cadastro* cliente);
     void adicionarPedido(Prato* prato);
     void exibirPedidos();
     void cancelarPedido(Prato* prato);
     Cadastro* getCliente() const;
     vector<Prato*>& getPedidos();
+    void adicionarComanda(Cadastro* cliente);
 };
 
 
