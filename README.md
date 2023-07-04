@@ -20,10 +20,6 @@ Samuel Lucca Viana Miranda
 User Story 1:
 Como um cliente, desejo visualizar todo o cardápio, separado por categorias especificas juntamente com o preço, para que eu possa avaliar e acompanhar minha preferência de pedido.
 
-3 comidas de opção.
-
-3 bebidas de opção.
-
 Critérios de aceitação:
 
 - Deve ser possível adicionar uma bebida.
