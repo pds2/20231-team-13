@@ -1,15 +1,19 @@
-<p align="center">Software para Restaurante</p>
-<h4 align="center"> 
-    :construction:  Projeto em construção  :construction:
-</h4>
+<h1 align="center">Software para Restaurante</h1>
+
+<h4 align="center">:construction: Projeto em construção :construction:</h4>
+
+
 Software desenvolvido para facilitar a organização de um restaurante que fornece o cardápio completo do estabelecimento, realiza o pedido dos clientes de acordo com cada comanda cadastrada, envia o pedido para a cozinha e fecha a conta de acordo com a forma de pagamento escolhida por cada indivíduo.
 Link do projeto: Notion - App Restaurante
 
 Nomes dos desenvolvedores:
 
 Marcelo Félix Hochreiter
+
 Bárbara Ferreira Ramos
+
 Samira Araujo Malaquias Souza
+
 Samuel Lucca Viana Miranda
 
 
