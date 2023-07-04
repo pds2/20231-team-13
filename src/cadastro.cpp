@@ -2,7 +2,10 @@
 #include <regex>
 #include  "../include/cadastro.h"
 
+    Cadastro::Cadastro()
+    {
 
+    }
 
 
    Cadastro::Cadastro(int id,std::string nome,std::string telefone, std::string cpf) {
@@ -68,3 +71,7 @@ void Cadastro::novo_cliente(int id, const std::string& nome, const std::string& 
         _novocliente.push_back(novoCliente);
     }
 
+Cadastro* Cadastro:: get_novo_cliente()
+{
+  return &_novocliente.back();
+}

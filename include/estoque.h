@@ -16,7 +16,7 @@ class Estoque{
     void adicionar_estoque(string item, int quantidade);
 
     void remover_estoque(string item, int quantidade);
-}
+};
 
 
 #endif
