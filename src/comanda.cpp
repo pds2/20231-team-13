@@ -8,8 +8,8 @@ Comanda::Comanda()
 Comanda::Comanda(Cadastro* cliente){
     if (cliente== nullptr){
         throw cliente_nao_existe_e();
-    }
     _cliente=cliente;
+}
 }
 
 void Comanda::adicionarPedido(Prato* prato){
