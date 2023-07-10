@@ -19,7 +19,6 @@ class prato_nao_encontrado_e {};
 
 
 class Comanda{
-    friend class Conta;
     private:
     Cadastro* _cliente;
     vector<Prato*> pedidos;

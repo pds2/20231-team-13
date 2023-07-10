@@ -9,7 +9,6 @@ using namespace std;
 class comanda_nao_existe_e{};
 
 class Conta{
-    friend class Caixa;
     private:
     Comanda* _comanda;
     double valorTotal;
@@ -21,7 +20,7 @@ class Conta{
     void calcularValorTotal();
     double get_valorTotal();
     void exibirFormasDePagamento();
-    bool informarContaPaga();
+    void informarContaPaga();
     double exibirValorTotalComGorjeta();
     bool get_contaPaga();
 };

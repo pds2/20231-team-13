@@ -11,7 +11,7 @@ Conta::Conta(Comanda* comanda){
 }
 
 void Conta::calcularValorTotal(){
-    for(Prato* prato: _comanda->pedidos){
+    for(Prato* prato: _comanda->getPedidos()){
         valorTotal += prato->get_preco();    
     }
 }
@@ -24,7 +24,7 @@ void Conta::exibirFormasDePagamento(){
     cout<< "Formas de pagamento disponiveis: Dinheiro, Crédito, Débito e pix"<< endl;
 }
 
-bool Conta::informarContaPaga(){
+void Conta::informarContaPaga(){
     contaPaga =true;
     cout<< "Pagamento efetuado com sucesso!"<< endl;
 }

@@ -10,9 +10,9 @@ Caixa::Caixa(){
 }
 
 void Caixa::contabilizarConta(Conta* conta){
-    if(conta->informarContaPaga()){
+    if(conta->get_contaPaga()){
         contas.push_back(conta);
-        double valorTotal = conta->valorTotal;
+        double valorTotal = conta->get_valorTotal();
         _saldo += valorTotal;
     }
     else {
@@ -29,7 +29,7 @@ void Caixa::contabilizarTransacao(Transacao* transacao){
 void Caixa::exibirExtrato(){
     cout << "Contas pagas:" << endl;
         for (Conta* conta : contas) {
-            cout<<"+"<<conta->valorTotal << endl;
+            cout<<"+"<<conta->get_valorTotal() << endl;
         }
     cout << "Transacoes de retirada:"<< endl;
         for (Transacao* transacao: transacoes){
