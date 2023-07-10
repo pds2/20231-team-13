@@ -17,20 +17,18 @@ telefone e
 class id_invalido_e {};
 class nome_invalido_e {};
 class telefone_invalido_e {};
-class cpf_invalido_e {};
 class Cadastro {
  
   private:
     unsigned int _id;
     std::string _nome;
     std::string _telefone;
-    std::string _cpf;
   public:
     /*
      * @brief constrói o cadastro 
      */
     Cadastro();
-    Cadastro(int id,std::string nome,std::string telefone, std::string cpf);
+    Cadastro(int id,std::string nome,std::string telefone);
 
     bool validarCPF(const std::string& cpf);
 
@@ -49,10 +47,6 @@ class Cadastro {
      */
     std::string get_telefone();
 
-    /*
-     * @brief pega o cpf do cliente
-     */
-    std::string get_cpf();
 
 
     std::string get_nome();
