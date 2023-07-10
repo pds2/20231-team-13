@@ -157,7 +157,11 @@ int main() {
                     std::cout << "Quantidade: " << std::endl;
                     std::cin >> quantidade;
 
-                    _estoque.adicionar_estoque(item,quantidade);
+                    std::string unidade;
+                    std::cout << "Unidade: " << std::endl;
+                    std::cin >> unidade;
+
+                    _estoque.adicionar_estoque(item,quantidade, unidade);
                 }
 
                 if (menuOptions2 == 2)

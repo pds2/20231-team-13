@@ -6,8 +6,8 @@ SRC_DIR = ./src
 INCLUDE_DIR = ./include
 PROGRAM_DIR = ./program
 
-${TARGET}: ${BUILD_DIR}/cadastro.o ${BUILD_DIR}/caixa.o ${BUILD_DIR}/cardapio.o ${BUILD_DIR}/comanda.o ${BUILD_DIR}/conta.o ${BUILD_DIR}/estoque.o ${BUILD_DIR}/menu.o ${BUILD_DIR}/main.o
-	${CC} -o ${TARGET} ${BUILD_DIR}/*.o
+${TARGET}: ${BUILD_DIR}/cadastro.o ${BUILD_DIR}/caixa.o ${BUILD_DIR}/cardapio.o ${BUILD_DIR}/comanda.o ${BUILD_DIR}/conta.o ${BUILD_DIR}/Data.o ${BUILD_DIR}/EstoqueDados.o ${BUILD_DIR}/estoque.o ${BUILD_DIR}/menu.o ${BUILD_DIR}/main.o
+	${CC} -o ${TARGET} ${BUILD_DIR}/*.o -l sqlite3
 
 ${BUILD_DIR}/cadastro.o: ${INCLUDE_DIR}/cadastro.h ${SRC_DIR}/cadastro.cpp
 	${CC} -I ${INCLUDE_DIR} -c ${SRC_DIR}/cadastro.cpp -o ${BUILD_DIR}/cadastro.o
@@ -24,14 +24,20 @@ ${BUILD_DIR}/comanda.o: ${INCLUDE_DIR}/comanda.h ${SRC_DIR}/comanda.cpp
 ${BUILD_DIR}/conta.o: ${INCLUDE_DIR}/conta.h ${SRC_DIR}/conta.cpp
 	${CC} -I ${INCLUDE_DIR} -c ${SRC_DIR}/conta.cpp -o ${BUILD_DIR}/conta.o
 
+${BUILD_DIR}/Data.o: ${INCLUDE_DIR}/DataBase/Data.h ${SRC_DIR}/DataBase/Data.cpp
+	${CC} -I ${INCLUDE_DIR} -c ${SRC_DIR}/DataBase/Data.cpp -o ${BUILD_DIR}/Data.o 
+
+${BUILD_DIR}/EstoqueDados.o: ${INCLUDE_DIR}/DataBase/EstoqueDados.h ${SRC_DIR}/DataBase/EstoqueDados.cpp
+	${CC} -I ${INCLUDE_DIR} -c  ${SRC_DIR}/DataBase/EstoqueDados.cpp -o ${BUILD_DIR}/EstoqueDados.o 
+
 ${BUILD_DIR}/estoque.o: ${INCLUDE_DIR}/estoque.h ${SRC_DIR}/estoque.cpp
 	${CC} -I ${INCLUDE_DIR} -c ${SRC_DIR}/estoque.cpp -o ${BUILD_DIR}/estoque.o
 
 ${BUILD_DIR}/menu.o: ${INCLUDE_DIR}/menu.h ${SRC_DIR}/menu.cpp
 	${CC} -I ${INCLUDE_DIR} -c ${SRC_DIR}/menu.cpp -o ${BUILD_DIR}/menu.o
 
-${BUILD_DIR}/main.o: ${INCLUDE_DIR}/cadastro.h ${INCLUDE_DIR}/caixa.h ${INCLUDE_DIR}/menu.h ${INCLUDE_DIR}/cardapio.h ${INCLUDE_DIR}/comanda.h ${INCLUDE_DIR}/conta.h ${INCLUDE_DIR}/estoque.h ${PROGRAM_DIR}/main.cpp
-	${CC} -I ${INCLUDE_DIR} -c ${PROGRAM_DIR}/main.cpp -o ${BUILD_DIR}/main.o
+${BUILD_DIR}/main.o: ${INCLUDE_DIR}/cadastro.h ${INCLUDE_DIR}/caixa.h ${INCLUDE_DIR}/menu.h ${INCLUDE_DIR}/cardapio.h ${INCLUDE_DIR}/comanda.h ${INCLUDE_DIR}/conta.h ${INCLUDE_DIR}/estoque.h ${INCLUDE_DIR}/DataBase/Data.h ${INCLUDE_DIR}/DataBase/EstoqueDados.h ${PROGRAM_DIR}/main.cpp
+	${CC} -I ${INCLUDE_DIR} -c ${PROGRAM_DIR}/main.cpp -o ${BUILD_DIR}/main.o -l sqlite3
 	
 
 clean:
