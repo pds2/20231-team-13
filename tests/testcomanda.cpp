@@ -4,7 +4,7 @@
 #include "../include/cardapio.h"
 
 TEST_CASE("teste da comanda"){
-    Cadastro cliente(123,"Samira","123456789","1234567890");
+    Cadastro cliente(123,"Joao","123456789","1234567890");
     Comanda comanda(&cliente);
     CHECK(comanda.getCliente()==&cliente);
 
