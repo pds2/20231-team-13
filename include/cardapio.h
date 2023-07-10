@@ -20,7 +20,7 @@ public:
     Prato(const std::string nome, double preco);
     std::string get_nome() const;
     double get_preco() const;
-     void exibir() const;
+    virtual void exibir() const;
 };
 
 class Entrada : public Prato {
@@ -44,11 +44,11 @@ public:
 
 class Cardapio {
 private:
-    std::vector<Prato> pratos;
+    std::vector<Prato*> pratos;
 
 public:
 
-    void adicionarPrato(Prato prato);
+    void adicionarPrato(Prato* prato);
 
     void exibir() const;
 
