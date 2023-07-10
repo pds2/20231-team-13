@@ -1,6 +1,6 @@
 <h1 align="center">Software para Restaurante</h1>
 
-<h4 align="center">:construction: Projeto em construção :construction:</h4>
+
 
 
 Software desenvolvido para facilitar a organização de um restaurante que fornece o cardápio completo do estabelecimento, realiza o pedido dos clientes de acordo com cada comanda cadastrada, envia o pedido para a cozinha e fecha a conta de acordo com a forma de pagamento escolhida por cada indivíduo.
