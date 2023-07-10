@@ -23,7 +23,9 @@ int main() {
     Estoque _estoque;
     Caixa _caixa;
     Cardapio _cardapio;
-    Comanda _comanda;
+    std::map<std::string,Comanda> _comandas;
+
+    try{
     for (;;)
     {
   
@@ -31,6 +33,10 @@ int main() {
         std::cin >> menuOptions1;
         if(menuOptions1 == 1)
         {
+            std::string cpfCliente;
+            std::cout << "Digite seu cpf: " << std::endl;
+            std::cin >> cpfCliente;
+
             _menu.MenuCliente();
             std::cin >> menuOptions2;
             if (menuOptions2 == 1)
@@ -56,7 +62,8 @@ int main() {
                 Cadastro clienteAtual = Cadastro(id ,nome,telefone,cpf);
                 _cadastros.push_back(clienteAtual);
 
-                _comanda.adicionarComanda(&_cadastros[-1]);
+                Comanda comandaAtual = Comanda(&clienteAtual);
+                _comandas[clienteAtual.get_cpf()]= comandaAtual;
                 
 
             }
@@ -73,12 +80,13 @@ int main() {
                 std::string nomeDoPrato;
                 std::cout << "Digite o nome do prato: " << std::endl;
                 cin >> nomeDoPrato;
-                _comanda.adicionarPedido(_cardapio.get_prato_escolhido(nomeDoPrato));
+                _comandas[cpfCliente].adicionarPedido(_cardapio.get_prato_escolhido(nomeDoPrato));
             }
 
             if (menuOptions2 == 4)
             {
-                _comanda.exibirPedidos();
+                
+                _comandas[cpfCliente].exibirPedidos();
             }
 
             if(menuOptions2 == 5)
@@ -86,30 +94,30 @@ int main() {
                 std::string nomeDoPrato;
                 std::cout << "Digite o nome do prato: " << std::endl;
                 cin >> nomeDoPrato;
-                _comanda.cancelarPedido(_cardapio.get_prato_escolhido(nomeDoPrato));
+                _comandas[cpfCliente].cancelarPedido(_cardapio.get_prato_escolhido(nomeDoPrato));
             }
 
             if (menuOptions2 == 6)
             {
-                Conta _conta(&_comanda);
+                Conta _conta(&_comandas[cpfCliente]);
                 _conta.exibirFormasDePagamento();
             }
 
             if (menuOptions2 == 7)
             {
-                Conta _conta(&_comanda);
+                Conta _conta(&_comandas[cpfCliente]);
                 _conta.calcularValorTotal();
             }
 
             if (menuOptions2 == 8)
             {
-                Conta _conta(&_comanda);
+                Conta _conta(&_comandas[cpfCliente]);
                 _conta.exibirValorTotalComGorjeta();
             }
 
             if (menuOptions2 == 9)
             {
-                Conta _conta(&_comanda);
+                Conta _conta(&_comandas[cpfCliente]);
                 _conta.informarContaPaga();
             }
 
@@ -211,10 +219,7 @@ int main() {
                     Prato* novaSobremesa = new Sobremesa(nomeSobremesa, preco);
                     _cardapio.adicionarPrato(novaSobremesa);
                 }
-                if (menuOptions2 == 7)
-                {
-                    _comanda.exibirPedidos();
-                }
+
                 if (menuOptions2 == 0)
                 {
                     continue;
@@ -235,5 +240,51 @@ int main() {
         }
         
     }
+
+    } catch(id_invalido_e )
+    {
+        std::cout << "ID invalido!" << std::endl;
+    }
+    catch(nome_invalido_e)
+    {
+        std::cout << "Nome invalido!" << std::endl;
+    }
+    catch(telefone_invalido_e)
+    {
+        std::cout << "Telefone invalido!" << std::endl;
+    }
+    catch(cpf_invalido_e)
+    {
+        std::cout << "CPF invalido!" << std::endl;
+    }
+     catch(cliente_invalido_e)
+    {
+        std::cout << "Cliente invalido!" << std::endl;
+    }
+     catch(preco_invalido_e)
+    {
+        std::cout << "Preco invalido!" << std::endl;
+    }
+     catch(nome_prato_invalido_e)
+    {
+        std::cout << "Nome do prato invalido!" << std::endl;
+    }
+     catch(cliente_nao_existe_e)
+    {
+        std::cout << "Cliente nao existe!" << std::endl;
+    }
+     catch(prato_nao_existe_e)
+    {
+        std::cout << "Este prato nao existe!" << std::endl;
+    }
+     catch(prato_nao_encontrado_e)
+    {
+        std::cout << "Este prato nao foi encontrado!" << std::endl;
+    }
+     catch(comanda_nao_existe_e)
+    {
+        std::cout << "Essa comanda nao existe!" << std::endl;
+    }
+
     
 }

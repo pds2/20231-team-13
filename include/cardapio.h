@@ -7,7 +7,6 @@
 
 
 class cliente_invalido_e {};
-class preço_invalido_e {};
 class nome_prato_invalido_e {};
 class preco_invalido_e {};
 

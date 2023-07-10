@@ -9,8 +9,8 @@ Prato:: Prato(const std::string nome, double preco) {
 
         if (preco <= 0) {
             throw preco_invalido_e();
-        _preco = preco;
     }
+        _preco = preco;
 }
 
 std::string Prato::get_nome() const {

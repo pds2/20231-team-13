@@ -18,9 +18,8 @@ void Menu::MenuGerente()
     std::cout << "(4)- Adicionar Prato Entrada" << std::endl;
     std::cout << "(5)- Adicionar Prato Principal" << std::endl;
     std::cout << "(6)- Adicionar Prato Sobremesa." << std::endl;
-    std::cout << "(7)- Exibir Pedidos." << std::endl;
     std::cout << "(0)- Sair" << std::endl;
-    std::cout << "Digite sua opção: ";
+    std::cout << "Digite sua opcao: ";
 
 }
 
@@ -37,7 +36,7 @@ void Menu::MenuCliente()
     std::cout << "(8)- Exibir valor total com gorjeta." << std::endl;
     std::cout << "(9)- Efetuar pagamento" << std::endl;
     std::cout << "(0)- Sair" << std::endl;
-    std::cout << "Digite sua opção: ";
+    std::cout << "Digite sua opcao: ";
 
 
 }
