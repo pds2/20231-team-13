@@ -1,6 +1,6 @@
 #include "../include/caixa.h"
 
-Transacao::Transacao(double valor, string descricao){
+Transacao::Transacao(double valor, std::string descricao){
     _valor=valor;
     _descricao=descricao;
 }
@@ -16,7 +16,7 @@ void Caixa::contabilizarConta(Conta* conta){
         _saldo += valorTotal;
     }
     else {
-        cout << "A conta não foi paga. Não é possível contabilizá-la." << endl;
+        std::cout << "A conta não foi paga. Não é possível contabilizá-la." << std::endl;
     }
 }
 
@@ -27,13 +27,13 @@ void Caixa::contabilizarTransacao(Transacao* transacao){
 }
 
 void Caixa::exibirExtrato(){
-    cout << "Contas pagas:" << endl;
+    std::cout << "Contas pagas:" << std::endl;
         for (Conta* conta : contas) {
-            cout<<"+"<<conta->get_valorTotal() << endl;
+            std::cout<<"+"<<conta->get_valorTotal() << std::endl;
         }
-    cout << "Transacoes de retirada:"<< endl;
+    std::cout << "Transacoes de retirada:"<< std::endl;
         for (Transacao* transacao: transacoes){
-            cout<<"-"<< transacao->_valor << endl;
+            std::cout<<"-"<< transacao->_valor << std::endl;
         }
 }
 

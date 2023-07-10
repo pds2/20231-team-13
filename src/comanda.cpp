@@ -20,7 +20,7 @@ void Comanda::adicionarPedido(Prato* prato){
 }
 
 void Comanda::exibirPedidos(){
-    cout<< "Comanda#" << _cliente->_nome << endl;
+    std::cout<< "Comanda#" << _cliente->get_nome() << std::endl;
     for(Prato* prato : pedidos){
         prato->exibir();
     }
@@ -33,7 +33,7 @@ void Comanda::cancelarPedido(Prato* prato) {
     if (it != pedidos.end()) {
         // Remove o prato da lista de pedidos
         pedidos.erase(it);
-        cout << "Pedido removido!" << endl;
+        std::cout << "Pedido removido!" << std::endl;
     } else {
         throw prato_nao_encontrado_e();
     }
@@ -43,7 +43,7 @@ Cadastro* Comanda::getCliente() const {
     return _cliente;
 }
 
-vector<Prato*>& Comanda::getPedidos() {
+std::vector<Prato*>& Comanda::getPedidos() {
         return pedidos;
     }
 

@@ -19,7 +19,7 @@ class nome_invalido_e {};
 class telefone_invalido_e {};
 class cpf_invalido_e {};
 class Cadastro {
-  friend class Comanda;
+ 
   private:
     unsigned int _id;
     std::string _nome;

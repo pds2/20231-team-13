@@ -5,23 +5,23 @@
 #include <vector>
 #include <iostream>
 #include <string>
-using namespace std;
+
 
 class Transacao{
     friend class Caixa;
     private:
     double _valor;
-    string _descricao;
+    std::string _descricao;
 
     public:
-    Transacao(double valor, string descricao);
+    Transacao(double valor, std::string descricao);
 
 };
 
 class Caixa{
     private:
-    vector<Conta*> contas;
-    vector<Transacao*> transacoes;
+    std::vector<Conta*> contas;
+    std::vector<Transacao*> transacoes;
     double _saldo;
 
     public:

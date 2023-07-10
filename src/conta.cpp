@@ -21,12 +21,12 @@ double Conta::get_valorTotal(){
 }
 
 void Conta::exibirFormasDePagamento(){
-    cout<< "Formas de pagamento disponiveis: Dinheiro, Crédito, Débito e pix"<< endl;
+    std::cout<< "Formas de pagamento disponiveis: Dinheiro, Crédito, Débito e pix"<< std::endl;
 }
 
 void Conta::informarContaPaga(){
     contaPaga =true;
-    cout<< "Pagamento efetuado com sucesso!"<< endl;
+    std::cout<< "Pagamento efetuado com sucesso!"<< std::endl;
 }
 
 double Conta::exibirValorTotalComGorjeta(){

@@ -8,7 +8,6 @@
 #include <string>
 #include <algorithm>
 
-using namespace std;
 
 //verifica se nao é criada uma comanda para um cliente que nao existe
 class cliente_nao_existe_e {};
@@ -21,7 +20,7 @@ class prato_nao_encontrado_e {};
 class Comanda{
     private:
     Cadastro* _cliente;
-    vector<Prato*> pedidos;
+    std::vector<Prato*> pedidos;
 
 
     public:
@@ -31,7 +30,7 @@ class Comanda{
     void exibirPedidos();
     void cancelarPedido(Prato* prato);
     Cadastro* getCliente() const;
-    vector<Prato*>& getPedidos();
+    std::vector<Prato*>& getPedidos();
     void adicionarComanda(Cadastro* cliente);
 };
 
