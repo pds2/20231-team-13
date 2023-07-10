@@ -25,7 +25,6 @@ class Cadastro {
     std::string _nome;
     std::string _telefone;
     std::string _cpf;
-    std::vector<Cadastro> _novocliente; // Vetor para armazenar os clientes
   public:
     /*
      * @brief constrói o cadastro 
@@ -54,12 +53,7 @@ class Cadastro {
      * @brief pega o cpf do cliente
      */
     std::string get_cpf();
-    /*
-     * @brief adiciona um novo cliente
-     */
-    void novo_cliente(int id, const std::string& nome, const std::string& telefone, const std::string& cpf);
 
-    Cadastro* get_novo_cliente();
 
     std::string get_nome();
 
