@@ -33,18 +33,17 @@ int main() {
         std::cin >> menuOptions1;
         if(menuOptions1 == 1)
         {
-            std::string cpfCliente;
-            std::cout << "Digite seu cpf: " << std::endl;
-            std::cin >> cpfCliente;
+            std::string nome;
+            std::cout << "Digite seu nome: " << std::endl;
+            std::cin >> nome;
 
             _menu.MenuCliente();
             std::cin >> menuOptions2;
             if (menuOptions2 == 1)
             {
                 int id = 0;
-                std::string nome;
                 std::string telefone;
-                std::string cpf;
+                
 
                 std::cout<< "Digite o ID: " << std::endl;
                 std::cin >> id;
@@ -55,15 +54,13 @@ int main() {
                 std::cout<< "Digite o seu telefone: " << std::endl;
                 std::cin >> telefone;
 
-                std::cout<< "Digite o seu CPF: " << std::endl;
-                std::cin >> cpf;
 
 
-                Cadastro clienteAtual = Cadastro(id ,nome,telefone,cpf);
+                Cadastro clienteAtual = Cadastro(id ,nome,telefone);
                 _cadastros.push_back(clienteAtual);
 
                 Comanda comandaAtual = Comanda(&clienteAtual);
-                _comandas[clienteAtual.get_cpf()]= comandaAtual;
+                _comandas[clienteAtual.get_nome()]= comandaAtual;
                 
 
             }
@@ -80,13 +77,13 @@ int main() {
                 std::string nomeDoPrato;
                 std::cout << "Digite o nome do prato: " << std::endl;
                 cin >> nomeDoPrato;
-                _comandas[cpfCliente].adicionarPedido(_cardapio.get_prato_escolhido(nomeDoPrato));
+                _comandas[nome].adicionarPedido(_cardapio.get_prato_escolhido(nomeDoPrato));
             }
 
             if (menuOptions2 == 4)
             {
                 
-                _comandas[cpfCliente].exibirPedidos();
+                _comandas[nome].exibirPedidos();
             }
 
             if(menuOptions2 == 5)
@@ -94,30 +91,30 @@ int main() {
                 std::string nomeDoPrato;
                 std::cout << "Digite o nome do prato: " << std::endl;
                 cin >> nomeDoPrato;
-                _comandas[cpfCliente].cancelarPedido(_cardapio.get_prato_escolhido(nomeDoPrato));
+                _comandas[nome].cancelarPedido(_cardapio.get_prato_escolhido(nomeDoPrato));
             }
 
             if (menuOptions2 == 6)
             {
-                Conta _conta(&_comandas[cpfCliente]);
+                Conta _conta(&_comandas[nome]);
                 _conta.exibirFormasDePagamento();
             }
 
             if (menuOptions2 == 7)
             {
-                Conta _conta(&_comandas[cpfCliente]);
+                Conta _conta(&_comandas[nome]);
                 _conta.calcularValorTotal();
             }
 
             if (menuOptions2 == 8)
             {
-                Conta _conta(&_comandas[cpfCliente]);
+                Conta _conta(&_comandas[nome]);
                 _conta.exibirValorTotalComGorjeta();
             }
 
             if (menuOptions2 == 9)
             {
-                Conta _conta(&_comandas[cpfCliente]);
+                Conta _conta(&_comandas[nome]);
                 _conta.informarContaPaga();
             }
 
@@ -257,10 +254,7 @@ int main() {
     {
         std::cout << "Telefone invalido!" << std::endl;
     }
-    catch(cpf_invalido_e &e)
-    {
-        std::cout << "CPF invalido!" << std::endl;
-    }
+    
      catch(cliente_invalido_e &e)
     {
         std::cout << "Cliente invalido!" << std::endl;

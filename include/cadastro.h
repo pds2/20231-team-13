@@ -10,8 +10,7 @@
  * A classe cadastro 
  guarda o número da comanda,
  nome,
-telefone e
- cpf.
+telefone 
  */
 
 class id_invalido_e {};
@@ -30,7 +29,7 @@ class Cadastro {
     Cadastro();
     Cadastro(int id,std::string nome,std::string telefone);
 
-    bool validarCPF(const std::string& cpf);
+
 
     /*
      * @brief pega o identificador da comanda
