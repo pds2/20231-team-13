@@ -6,6 +6,7 @@
 #include "../third_party/doctest.h"
 #include "../include/cardapio.h"
 #include "../include/cadastro.h"
+#include <string>
 
 
 
@@ -43,7 +44,7 @@ TEST_CASE("Teste da função exibir() do Cardapio") {
             "Prato Principal - Nome: Bife, Preco: R$25\n"
             "Sobremesa - Nome: Sorvete, Preco: R$8\n";
 
-        doctest::CHECK_EQ(oss.str(), expectedOutput);
+        CHECK(oss.str() == expectedOutput);
     }
 
     // Limpar o cardápio (liberar memória)
@@ -51,9 +52,3 @@ TEST_CASE("Teste da função exibir() do Cardapio") {
         delete prato;
     }
 }
-
-
-    // Limpar o cardápio (liberar memória)
-    for (Prato* prato : cardapio.get_pratos()) {
-        delete prato;
-    }
