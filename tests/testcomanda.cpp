@@ -4,7 +4,7 @@
 #include "../include/cardapio.h"
 
 TEST_CASE("01-criar comanda"){
-    Cadastro cliente(123,"Joao","123456789","1234567890");
+    Cadastro cliente(123,"Joao","123456789");
     Comanda comanda(&cliente);
     CHECK(comanda.getCliente()==&cliente);
 }
@@ -14,7 +14,7 @@ TEST_CASE("02- criar comanda para cliente inexistente"){
 }
 
 TEST_CASE("03- adicionar prato"){
-    Cadastro cliente(123,"Joao","123456789","1234567890");
+    Cadastro cliente(123,"Joao","123456789");
     Comanda comanda(&cliente);
     Prato prato1("Prato", 10.0);
 
@@ -26,7 +26,7 @@ TEST_CASE("03- adicionar prato"){
 }
 
 TEST_CASE("04- cancela prato que nao existe na comanda"){
-    Cadastro cliente(123,"Joao","123456789","1234567890");
+    Cadastro cliente(123,"Joao","123456789");
     Comanda comanda(&cliente);
     Prato prato1("Prato", 10.0);
     comanda.adicionarPedido(&prato1);
@@ -37,7 +37,7 @@ TEST_CASE("04- cancela prato que nao existe na comanda"){
 }
 
 TEST_CASE("05- cancelar pedido"){
-    Cadastro cliente(123,"Joao","123456789","1234567890");
+    Cadastro cliente(123,"Joao","123456789");
     Comanda comanda(&cliente);
     Prato prato1("Prato", 10.0);
     Prato prato2("Prato 2", 20.0);

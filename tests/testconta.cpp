@@ -5,7 +5,7 @@
 #include "../include/conta.h"
 
 Conta criaconta(){
-    Cadastro cliente(1, "Cliente", "123456789", "123456789");
+    Cadastro cliente(1, "Cliente", "123456789");
     Prato prato1("Prato1", 10);
     Prato prato2("Prato2", 15);
     Comanda comanda(&cliente);
@@ -24,7 +24,7 @@ TEST_CASE("teste valor com gorjeta"){
 }
 
 TEST_CASE("teste informar conta paga"){
-    Cadastro cliente(1, "Cliente", "123456789", "123456789");
+    Cadastro cliente(1, "Cliente", "123456789");
     Prato prato1("Prato1", 10);
     Prato prato2("Prato2", 15);
     Comanda comanda(&cliente);
