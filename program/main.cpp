@@ -178,7 +178,8 @@ int main() {
                     std::cout << "Digite o preço: " << std::endl;
                     std::cin >>preco;
 
-                    Entrada novoEntrada(nomeEntrada,preco);
+                   // Entrada novoEntrada(nomeEntrada,preco);
+                   Prato* novoEntrada = new Entrada(nomeEntrada, preco);
                     _cardapio.adicionarPrato(novoEntrada);
                 }
                  if (menuOptions2 == 5)
@@ -191,7 +192,8 @@ int main() {
                     std::cout << "Digite o preço: " << std::endl;
                     std::cin >> preco;
 
-                    PratoPrincipal novoPrincipal(nomePrincipal,preco);
+                   // PratoPrincipal novoPrincipal(nomePrincipal,preco);
+                    Prato* novoPrincipal = new PratoPrincipal(nomePrincipal, preco);
                     _cardapio.adicionarPrato(novoPrincipal);
                 }
                  if (menuOptions2 == 6)
@@ -204,8 +206,9 @@ int main() {
                     std::cout << "Digite o preço: " << std::endl;
                     std::cin >>preco;
 
-                    Sobremesa novoSobremesa(nomeSobremesa,preco);
-                    _cardapio.adicionarPrato(novoSobremesa);
+                    //Sobremesa novoSobremesa(nomeSobremesa,preco);
+                    Prato* novaSobremesa = new Sobremesa(nomeSobremesa, preco);
+                    _cardapio.adicionarPrato(novaSobremesa);
                 }
                 if (menuOptions2 == 7)
                 {
