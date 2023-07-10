@@ -19,7 +19,7 @@ int main() {
     unsigned int menuOptions1 = 0;
     unsigned int menuOptions2 = 0;
     Menu _menu;
-    Cadastro _cadastro;
+    vector<Cadastro> _cadastros;
     Estoque _estoque;
     Caixa _caixa;
     Cardapio _cardapio;
@@ -53,9 +53,10 @@ int main() {
                 std::cin >> cpf;
 
 
-                _cadastro.novo_cliente(id,nome,telefone,cpf);
+                Cadastro clienteAtual = Cadastro(id ,nome,telefone,cpf);
+                _cadastros.push_back(clienteAtual);
 
-                _comanda.adicionarComanda(_cadastro.get_novo_cliente());
+                _comanda.adicionarComanda(&_cadastros[-1]);
                 
 
             }
