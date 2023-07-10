@@ -9,7 +9,6 @@
 
 
    Cadastro::Cadastro(int id,std::string nome,std::string telefone, std::string cpf) {
-        try {
             // Verifica se o ID é válido (maior que zero)
             if (id <= 0) {
                 throw id_invalido_e();
@@ -18,29 +17,25 @@
 
             // Verifica se o nome não está vazio
             if (nome.empty()) {
-                throw nome_invalido_e();{
-                  std::cout<<"nome não validado"<<std::endl;
-                }
-            }
+                throw nome_invalido_e();
             this->_nome = nome;
-
+            }
             // Verifica se o telefone não está vazio
             if (telefone.empty()) {
-                throw telefone_invalido_e();{
-                  std::cout<<"telefone não validado"<<std::endl;
-                }
-            }
+                throw telefone_invalido_e();
             this->_telefone = telefone;
-
+            }
             // Verifica se o CPF é válido
             if (!validarCPF(cpf)) {
-                throw cpf_invalido_e();{
-                  std::cout<<"cpf não validado"<<std::endl;
-                }
-            }
+                throw cpf_invalido_e();
+            
             this->_cpf = cpf;
-        } 
-}
+        }
+   }
+
+        
+  
+
    
    
 
