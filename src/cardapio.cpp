@@ -44,29 +44,12 @@ void Sobremesa::exibir() const {
         Prato::exibir();
     }
 
-    void Cardapio::adicionarPrato(Prato prato) {
+    void Cardapio::adicionarPrato(Prato* prato) {
         pratos.push_back(prato);
     }
      void Cardapio::exibir() const {
-        for (const Prato prato : pratos) {
-            prato.exibir();
+        for (const  Prato* prato : pratos) {
+            prato->exibir();
         }
-<<<<<<< HEAD
-    }
-
-    Prato* Cardapio::get_prato_escolhido(std::string nomeDoPrato)
-    {
-        for (auto x:pratos)
-        {
-            if (x.get_nome() == nomeDoPrato)
-            {
-                Prato* aux = &x;
-                return aux;
-            }
-            
-        }
-        
-=======
     
->>>>>>> e535c8ce56b0c5cc56dd5d7e850918bd637c34e8
     }
