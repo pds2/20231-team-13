@@ -16,7 +16,7 @@ void Caixa::contabilizarConta(Conta* conta){
         _saldo += valorTotal;
     }
     else {
-        std::cout << "A conta não foi paga. Não é possível contabilizá-la." << std::endl;
+        std::cout << "A conta nao foi paga. Não e possível contabiliza-la." << std::endl;
     }
 }
 

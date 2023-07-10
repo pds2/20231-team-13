@@ -6,7 +6,7 @@ void Menu::MenuStart()
     std::cout << "(1)- Menu Cliente." << std::endl;
     std::cout << "(2)- Menu Gerente." << std::endl;
     std::cout << "(0)- Sair." << std::endl;
-    std::cout << "Digite sua opção: " ;
+    std::cout << "Digite sua opcao: " ;
 }
 
 void Menu::MenuGerente()

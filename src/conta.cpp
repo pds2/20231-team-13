@@ -21,7 +21,7 @@ double Conta::get_valorTotal(){
 }
 
 void Conta::exibirFormasDePagamento(){
-    std::cout<< "Formas de pagamento disponiveis: Dinheiro, Crédito, Débito e pix"<< std::endl;
+    std::cout<< "Formas de pagamento disponiveis: Dinheiro, Credito, Debito e pix"<< std::endl;
 }
 
 void Conta::informarContaPaga(){
