@@ -53,3 +53,17 @@ void Sobremesa::exibir() const {
         }
     
     }
+
+    Prato* Cardapio::get_prato_escolhido(std::string nomeDoPrato) {
+    for (Prato* prato : pratos) {
+        if (prato->get_nome() == nomeDoPrato) {
+            return prato;
+        }
+    }
+    return nullptr;  // Retorna nullptr caso não encontre o prato com o nome especificado
+}
+
+    // Implementação da função get_pratos()
+    std::vector<Prato*> Cardapio::get_pratos() const {
+        return pratos;
+}

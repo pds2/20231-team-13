@@ -1,11 +1,8 @@
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#define TEST_CASE 
-#define  DOCTEST_CHECK
-#define  DOCTEST_CHECK_EQ
 #include "../third_party/doctest.h"
 #include "../include/cardapio.h"
 #include "../include/cadastro.h"
 #include <string>
+
 
 
 

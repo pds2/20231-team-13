@@ -1,11 +1,8 @@
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#define TEST_CASE 
-#define SUBCASE DOCTEST_SUBCASE
 #include "../third_party/doctest.h"
 #include "../include/cadastro.h"
 
 
-// Testes de unidade usando doctest
+
 TEST_CASE("Teste do construtor Cadastro") {
     // Teste 1: ID inválido
     SUBCASE("ID inválido") {

@@ -53,6 +53,8 @@ public:
     void exibir() const;
 
     Prato* get_prato_escolhido(std::string nomeDoPrato);
+
+    std::vector<Prato*> get_pratos() const;
 };
 
 #endif
