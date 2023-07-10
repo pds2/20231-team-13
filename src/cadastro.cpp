@@ -18,24 +18,28 @@
 
             // Verifica se o nome não está vazio
             if (nome.empty()) {
-                throw nome_invalido_e();
+                throw nome_invalido_e();{
+                  std::cout<<"nome não validado"<<std::endl;
+                }
             }
             this->_nome = nome;
 
             // Verifica se o telefone não está vazio
             if (telefone.empty()) {
-                throw telefone_invalido_e();
+                throw telefone_invalido_e();{
+                  std::cout<<"telefone não validado"<<std::endl;
+                }
             }
             this->_telefone = telefone;
 
             // Verifica se o CPF é válido
             if (!validarCPF(cpf)) {
-                throw cpf_invalido_e();
+                throw cpf_invalido_e();{
+                  std::cout<<"cpf não validado"<<std::endl;
+                }
             }
             this->_cpf = cpf;
-        } catch (...) {
-        // Lógica de tratamento da exceção
-    }
+        } 
 }
    
    
