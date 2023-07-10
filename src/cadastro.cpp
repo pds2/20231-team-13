@@ -26,7 +26,7 @@
             this->_telefone = telefone;
             }
             
-        }
+        
    }
 
         
