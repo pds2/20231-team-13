@@ -13,6 +13,9 @@ Prato:: Prato(const std::string nome, double preco) {
     }
 }
 
+std::string Prato::get_nome() const {
+  return _nome;
+}
 double Prato::get_preco() const {
   return _preco;
 }
@@ -21,6 +24,8 @@ double Prato::get_preco() const {
         std::cout << "Nome: " << this->_nome << ", Preco: R$" << this->_preco << std::endl;
     }
 
+
+
   Entrada::Entrada(const std::string nome, double preco)
         : Prato(nome, preco) {
     }
@@ -28,6 +33,9 @@ double Prato::get_preco() const {
         std::cout << "Entrada - ";
         Prato::exibir();
     }
+
+
+
      PratoPrincipal::PratoPrincipal(const std::string nome, double preco)
         : Prato(nome, preco) {
         }
@@ -35,6 +43,9 @@ void PratoPrincipal::exibir() const {
         std::cout << "Prato Principal - ";
         Prato::exibir();
     }
+
+
+
 
      Sobremesa::Sobremesa(const std::string nome, double preco)
         : Prato(nome, preco) {
@@ -44,9 +55,13 @@ void Sobremesa::exibir() const {
         Prato::exibir();
     }
 
+
+
+
     void Cardapio::adicionarPrato(Prato* prato) {
         pratos.push_back(prato);
     }
+
      void Cardapio::exibir() const {
         for (const  Prato* prato : pratos) {
             prato->exibir();

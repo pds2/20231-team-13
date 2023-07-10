@@ -42,7 +42,7 @@ public:
     void exibir() const;
 };
 
-class Cardapio {
+class Cardapio : public Prato {
 private:
     std::vector<Prato*> pratos;
 
