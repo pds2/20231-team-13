@@ -241,47 +241,47 @@ int main() {
         
     }
 
-    } catch(id_invalido_e )
+    } catch(id_invalido_e &e)
     {
         std::cout << "ID invalido!" << std::endl;
     }
-    catch(nome_invalido_e)
+    catch(nome_invalido_e &e)
     {
         std::cout << "Nome invalido!" << std::endl;
     }
-    catch(telefone_invalido_e)
+    catch(telefone_invalido_e &e)
     {
         std::cout << "Telefone invalido!" << std::endl;
     }
-    catch(cpf_invalido_e)
+    catch(cpf_invalido_e &e)
     {
         std::cout << "CPF invalido!" << std::endl;
     }
-     catch(cliente_invalido_e)
+     catch(cliente_invalido_e &e)
     {
         std::cout << "Cliente invalido!" << std::endl;
     }
-     catch(preco_invalido_e)
+     catch(preco_invalido_e &e)
     {
         std::cout << "Preco invalido!" << std::endl;
     }
-     catch(nome_prato_invalido_e)
+     catch(nome_prato_invalido_e &e)
     {
         std::cout << "Nome do prato invalido!" << std::endl;
     }
-     catch(cliente_nao_existe_e)
+     catch(cliente_nao_existe_e &e)
     {
         std::cout << "Cliente nao existe!" << std::endl;
     }
-     catch(prato_nao_existe_e)
+     catch(prato_nao_existe_e &e)
     {
         std::cout << "Este prato nao existe!" << std::endl;
     }
-     catch(prato_nao_encontrado_e)
+     catch(prato_nao_encontrado_e &e)
     {
         std::cout << "Este prato nao foi encontrado!" << std::endl;
     }
-     catch(comanda_nao_existe_e)
+     catch(comanda_nao_existe_e &e)
     {
         std::cout << "Essa comanda nao existe!" << std::endl;
     }
