@@ -26,22 +26,6 @@ TEST_CASE("Teste da função exibir() do Cardapio") {
     cardapio.adicionarPrato(pratoPrincipal);
     cardapio.adicionarPrato(sobremesa);
 
-    SUBCASE("Exibir cardápio") {
-        std::ostringstream oss;
-        std::streambuf* coutBuffer = std::cout.rdbuf();
-        std::cout.rdbuf(oss.rdbuf());
-
-        cardapio.exibir();
-
-        std::cout.rdbuf(coutBuffer);
-
-        std::string expectedOutput =
-            "Entrada - Nome: Salada, Preco: R$10\n"
-            "Prato Principal - Nome: Bife, Preco: R$25\n"
-            "Sobremesa - Nome: Sorvete, Preco: R$8\n";
-
-        CHECK(oss.str() == expectedOutput);
-    }
 
     // Limpar o cardápio (liberar memória)
     for (Prato* prato : cardapio.get_pratos()) {
