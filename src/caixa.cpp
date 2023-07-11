@@ -1,9 +1,5 @@
 #include "../include/caixa.h"
 
-Transacao::Transacao(double valor, std::string descricao){
-    _valor=valor;
-    _descricao=descricao;
-}
 
 Caixa::Caixa(){
     _saldo=0;
@@ -21,18 +17,13 @@ void Caixa::contabilizarConta(Conta conta){
     }
 }
 
-void Caixa::contabilizarTransacao(Transacao* transacao){
-    transacoes.push_back(transacao);
-        double valor = transacao->_valor;
-        _saldo += valor;
-}
 
 void Caixa::exibirExtrato(){
     std::cout << "Saldo: " << _saldo << std::endl;
 
     std::cout << "Contas pagas:" << std::endl;
         for (Conta conta : contas) {
-            std::cout<<"+"<<conta.get_valorTotal() << std::endl;
+            std::cout<<"+"<<conta.get_valorTotal() << std::endl << std::endl;
         }
     // std::cout << "Transacoes de retirada:"<< std::endl;
     //     for (Transacao* transacao: transacoes){
