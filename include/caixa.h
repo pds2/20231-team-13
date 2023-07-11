@@ -20,13 +20,13 @@ class Transacao{
 
 class Caixa{
     private:
-    std::vector<Conta*> contas;
+    std::vector<Conta> contas;
     std::vector<Transacao*> transacoes;
     double _saldo;
 
     public:
     Caixa();
-    void contabilizarConta(Conta* conta);
+    void contabilizarConta(Conta conta);
     void contabilizarTransacao(Transacao* transacao);
     double saldoFinal();
     void exibirExtrato();

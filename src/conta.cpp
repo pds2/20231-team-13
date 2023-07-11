@@ -30,7 +30,7 @@ void Conta::informarContaPaga(){
 }
 
 double Conta::exibirValorTotalComGorjeta(){
-    return (valorTotal*1,1);
+    return (valorTotal*1.1);
 }
 
 bool Conta::get_contaPaga(){

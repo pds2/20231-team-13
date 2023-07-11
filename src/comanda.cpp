@@ -20,10 +20,11 @@ void Comanda::adicionarPedido(Prato* prato){
 }
 
 void Comanda::exibirPedidos(){
-    std::cout<< "Comanda#" << _cliente->get_nome() << std::endl;
+    std::cout << std::endl;
     for(Prato* prato : pedidos){
         prato->exibir();
     }
+    std::cout << std::endl;
 }
 
 void Comanda::cancelarPedido(Prato* prato) {
